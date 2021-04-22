@@ -1,1 +1,4 @@
-const content = document.querySelector('#content')
+import  showcase from './weather.js'
+import './style.css';
+
+showcase()
