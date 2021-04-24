@@ -31,6 +31,7 @@ const weatherOrigin = async (city)=>{
     if (data.cod === 200) {
         return data;
       }
+    throw new Error('City not found. Please try again.');
 }
 
 const weatherParameters= async(data,units)=>{
@@ -127,7 +128,7 @@ const showWeather= ()=>{
         form.reset();
         weatherOrigin(weatherData)
         .then((data)=>{weatherParameters(data)
-        }).catch(err=>console.log(err))
+        }).catch(err=>(err.message))
     })
     searchBox.value = ""
     form.appendChild(searchBox)
