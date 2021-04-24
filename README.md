@@ -12,6 +12,10 @@ One can extract weather information about a current weather from a city which in
 
 ![Weather App](src/assets/Screenshot.png)
 
+## Live Demo
+
+![Live link](https://zawadisumba66.github.io/weather-app/)
+
 ## Built With
 
 - JavaScript

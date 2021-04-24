@@ -26,7 +26,7 @@ main.style.backgroundSize = 'cover';
 
 
 const weatherOrigin = async (city)=>{
-    let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=71fbfe5f66beeee255c8447a6ae9b37b`);
+    let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=71fbfe5f66beeee255c8447a6ae9b37b`);
     const data = await response.json();
     if (data.cod === 200) {
         return data;
