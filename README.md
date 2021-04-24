@@ -14,7 +14,7 @@ One can extract weather information about a current weather from a city which in
 
 ## Live Demo
 
-![Live link](https://zawadisumba66.github.io/weather-app/)
+[Live link](https://zawadisumba66.github.io/weather-app/)
 
 ## Built With
 
