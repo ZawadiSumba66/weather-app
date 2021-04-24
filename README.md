@@ -2,10 +2,11 @@
 # Weather App
 The weather app project is built using the  open weather API from the [OpenWeatherApp](https://openweathermap.org/current#data).
 One can extract weather information about a current weather from a city which includes parameters like:
-- Temperature(Which can be toggled from Celsius to Farehnheit)
+
+- Temperature(which can be toggled from Celsius to Farehnheit)
 - Humidty
-- Preseure
-- WindSpeed
+- Pressure
+- Wind Speed
 
 ## Screenshot
 
