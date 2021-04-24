@@ -1,8 +1,9 @@
 .showcase {
-    width: 100%;
-    height: 150vh;
-    padding: 4rem 4rem;
-  }
+  width: 100%;
+  height: 100vh;
+  padding: 4rem 4rem;
+}
+
 li {
   list-style: none;
 }
@@ -30,6 +31,6 @@ img {
   width: 100px;
 }
 
-.description{
+.description {
   font-size: 20px;
 }

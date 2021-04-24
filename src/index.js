@@ -1,12 +1,12 @@
-import {weatherOrigin, weatherParameters,showWeather} from './weather.js'
+import { weatherOrigin, weatherParameters, showWeather } from './weather';
 import './style.css';
 
-showWeather()
+showWeather();
 
-window.onload = async()=>{
-    weatherOrigin('Nairobi').then((data)=>{
-        weatherParameters(data) 
-    })
-}
+window.onload = async () => {
+  weatherOrigin('Nairobi').then((data) => {
+    weatherParameters(data);
+  });
+};
 
-weatherParameters()
+weatherParameters();
