@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Weather App
-The weather app project is built using the  open weather API from the [OpenWeatherApp](https://openweathermap.org/current#data).
+The weather app project built using the  open weather API from the [OpenWeatherApp](https://openweathermap.org/current#data).
 One can extract weather information about a current weather from a city which includes parameters like:
 
 - Temperature(which can be toggled from Celsius to Farehnheit)
