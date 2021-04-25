@@ -19,8 +19,8 @@ const icon = new Image();
 const allHumid = document.createElement('div');
 const allPressure = document.createElement('div');
 const allWind = document.createElement('div');
-const message = document.createElement('div')
-message.classList.add('text-uppercase','font-weight-bold','text-center','mx-auto','w-50','message')
+const message = document.createElement('span')
+message.classList.add('text-danger','text-uppercase','font-weight-bold','text-center','message')
 const main = document.createElement('div');
 main.classList.add('showcase', 'text-center');
 main.style.background = `url(${weather})`;
