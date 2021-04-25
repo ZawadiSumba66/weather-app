@@ -19,8 +19,8 @@ const icon = new Image();
 const allHumid = document.createElement('div');
 const allPressure = document.createElement('div');
 const allWind = document.createElement('div');
-const message = document.createElement('span')
-message.classList.add('text-danger','text-uppercase','font-weight-bold','text-center','message')
+const message = document.createElement('span');
+message.classList.add('text-danger', 'text-uppercase', 'font-weight-bold', 'text-center', 'message');
 const main = document.createElement('div');
 main.classList.add('showcase', 'text-center');
 main.style.background = `url(${weather})`;
@@ -32,12 +32,11 @@ const weatherOrigin = async (city) => {
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=71fbfe5f66beeee255c8447a6ae9b37b`);
   const data = await response.json();
   if (data.cod === 200) {
-      message.style.display='none'
+    message.style.display = 'none';
     return data;
   }
-  message.style.display="block"
+  message.style.display = 'block';
   throw new Error('City not found!');
- 
 };
 const changeTemperature = (temperature, tempF, tempC, units) => {
   button.addEventListener('click', (e) => {
@@ -133,12 +132,12 @@ const showWeather = () => {
       .then((data) => {
         weatherParameters(data);
       }).catch((err) => {
-         message.textContent = err.message;
+        message.textContent = err.message;
       });
   });
   searchBox.value = '';
   form.appendChild(searchBox);
-  main.appendChild(message)
+  main.appendChild(message);
   main.appendChild(form);
   content.appendChild(main);
 };
