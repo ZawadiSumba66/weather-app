@@ -19,6 +19,8 @@ const icon = new Image();
 const allHumid = document.createElement('div');
 const allPressure = document.createElement('div');
 const allWind = document.createElement('div');
+const message = document.createElement('div')
+message.classList.add('text-uppercase','font-weight-bold','text-center','mx-auto','w-50','message')
 const main = document.createElement('div');
 main.classList.add('showcase', 'text-center');
 main.style.background = `url(${weather})`;
@@ -30,9 +32,12 @@ const weatherOrigin = async (city) => {
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=71fbfe5f66beeee255c8447a6ae9b37b`);
   const data = await response.json();
   if (data.cod === 200) {
+      message.style.display='none'
     return data;
   }
-  throw new Error('City not found. Please try again.');
+  message.style.display="block"
+  throw new Error('City not found!');
+ 
 };
 const changeTemperature = (temperature, tempF, tempC, units) => {
   button.addEventListener('click', (e) => {
@@ -53,7 +58,6 @@ const changeTemperature = (temperature, tempF, tempC, units) => {
 };
 const weatherParameters = async (data, units) => {
   const all = document.createElement('div');
-
   const component = document.createElement('div');
   component.innerHTML = '';
   const temperature = data.main.temp;
@@ -67,7 +71,6 @@ const weatherParameters = async (data, units) => {
   const climate = data.weather[0].icon;
   icon.src = `https://openweathermap.org/img/wn/${climate}.png`;
 
-  //  icon.innerHTML =  `<img src="https://openweathermap.org/img/wn/${climate}.png`
   cityName.textContent = data.name;
   cityName.classList.add('text-center');
   const div = document.createElement('div');
@@ -129,10 +132,13 @@ const showWeather = () => {
     weatherOrigin(weatherData)
       .then((data) => {
         weatherParameters(data);
-      }).catch((err) => (err.message));
+      }).catch((err) => {
+         message.textContent = err.message;
+      });
   });
   searchBox.value = '';
   form.appendChild(searchBox);
+  main.appendChild(message)
   main.appendChild(form);
   content.appendChild(main);
 };
