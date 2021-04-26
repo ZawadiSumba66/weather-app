@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch",
+    "dev": "webpack --mode development",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -18,7 +22,10 @@
   },
   "homepage": "https://github.com/ZawadiSumba66/weather-app#readme",
   "devDependencies": {
+    "css-loader": "^5.2.4",
+    "style-loader": "^2.0.0",
     "webpack": "^5.33.2",
-    "webpack-cli": "^4.6.0"
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
